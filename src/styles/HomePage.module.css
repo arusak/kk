@@ -1,0 +1,62 @@
+.homePage {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    position: absolute;
+
+    img {
+        height: 30vh;
+        aspect-ratio: 1;
+    }
+
+    height: 20vh;
+    aspect-ratio: 1;
+    bottom: 0;
+}
+
+.logoAnimation {
+    animation: flyUp 5s ease-in-out forwards;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+}
+
+.titleAnimation {
+    animation: flyDown 5s ease-in-out forwards;
+}
+
+.startButton {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+}
+
+
+@keyframes flyDown {
+    from {
+        top: -30%;
+    }
+    to {
+        top: 50%;
+    }
+}
+
+@keyframes flyUp {
+    from {
+        bottom: -30%;
+    }
+    to {
+        bottom: 65%;
+    }
+}
