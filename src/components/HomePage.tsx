@@ -17,7 +17,7 @@ const HomePage: React.FC<HomePageProps> = ({onStart}) => {
       <div className={styles.homePage}>
         <div id="logo" className={styles.logo}><img src={'images/logo.png'}/></div>
         <div id="title" className={styles.title}>
-          <div onClick={onStart}>Играть</div>
+          <h1 onClick={onStart}>Играть</h1>
         </div>
       </div>
   );
