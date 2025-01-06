@@ -63,7 +63,7 @@ const App: React.FC = () => {
             </div>
         }
 
-        <video autoPlay loop muted className={styles.video}>
+        <video autoPlay loop muted playsInline className={styles.video}>
           <source src={'images/bg.webm'} type="video/webm"/>
         </video>
       </div>
