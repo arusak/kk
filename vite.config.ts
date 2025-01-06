@@ -1,7 +1,7 @@
 import {defineConfig} from 'vite'
 import react from '@vitejs/plugin-react'
 import {obfuscator} from 'rollup-obfuscator';
-// @ts-ignore
+// @ts-expect-error xxx
 import {readableCssModules} from 'vite-plugin-readable-css-modules';
 
 export default defineConfig({
@@ -16,5 +16,7 @@ export default defineConfig({
   ],
   build: {
     sourcemap: false,
+    outDir: 'build',
   },
+  base: '/kk/'
 })
