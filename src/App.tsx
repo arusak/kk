@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import styles from './styles/App.module.css';
 import HomePage from './components/HomePage';
 import GamePage from './components/GamePage';
@@ -7,6 +7,18 @@ const App: React.FC = () => {
   const [stage, setStage] = useState(0);
   const [error, setError] = useState(false);
   const [showSplash, setShowSplash] = useState(false);
+
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.muted = true;
+      video.play().catch((error) => {
+        console.error('Video autoplay failed:', error);
+      });
+    }
+  }, []);
 
   const handleCodeSubmit = (code: string) => {
 
