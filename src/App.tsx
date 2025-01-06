@@ -64,7 +64,7 @@ const App: React.FC = () => {
         }
 
         <video autoPlay loop muted className={styles.video}>
-          <source src={'images/bg.mp4'} type="video/mp4"/>
+          <source src={'images/bg.webm'} type="video/webm"/>
         </video>
       </div>
   );
