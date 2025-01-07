@@ -61,7 +61,10 @@ const App: React.FC = () => {
   return (
       <div className={styles.app} onClick={playVideo}>
         {stage === 0 ? (
-            <HomePage onStart={() => setStage(1)} onWork={() => setSplash('В этой игре есть только веселье!')}/>
+            <HomePage onStart={() => setStage(1)} onWork={() => {
+              playVideo();
+              setSplash('В этой игре есть только веселье!')
+            }}/>
         ) : stage === 6 ? (
             <div className={styles.finalMessage}>
               <img src={'images/final.jpeg'} style={{maxHeight: '50vh', maxWidth: '50vw'}}/>
@@ -80,7 +83,7 @@ const App: React.FC = () => {
             </div>
         }
 
-        <video autoPlay loop muted playsInline className={styles.video}>
+        <video autoPlay loop muted playsInline className={styles.video} ref={videoRef}>
           <source src={'images/bg.webm'} type="video/webm"/>
         </video>
       </div>
