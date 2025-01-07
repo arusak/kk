@@ -29,13 +29,14 @@
     position: absolute;
     z-index: 1;
     inset: 0;
+    backdrop-filter: blur(1px);
 }
 
 .splash {
     position: absolute;
     top: calc(50% - 4rem);
-    left: calc(50% - 7rem);
-    width: 14rem;
+    left: calc(50% - 6rem);
+    width: 12rem;
     height: 8rem;
     border: 1vh solid #242424;
     background: #dddddd;
