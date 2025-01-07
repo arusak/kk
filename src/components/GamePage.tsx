@@ -8,7 +8,7 @@ type GamePageProps = {
   onCodeSubmit: (code: string) => void;
 };
 
-const stageBg = ['transparent', '#196f3d', '#1c2833', '#3498db', '#9c640c', 'rgb(0 0 20 / 20%)']
+const stageBg = ['transparent', '#196f3d', '#1c2833', '#3498db', '#9c640c', 'rgb(0 0 20 / 50%)']
 
 const GamePage: React.FC<GamePageProps> = ({stage, onCodeSubmit}) => {
   const [inputValue, setInputValue] = useState<string>('');
