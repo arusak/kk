@@ -2,9 +2,10 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import styles from './styles/App.module.css';
 import HomePage from './components/HomePage';
 import GamePage from './components/GamePage';
+import {useLocalStorage} from 'usehooks-ts'
 
 const App: React.FC = () => {
-  const [stage, setStage] = useState(0);
+  const [stage, setStage] = useLocalStorage('stage', 0)
   const [splash, setSplash] = useState<string | null>(null)
 
   const videoRef = useRef<HTMLVideoElement>(null);
